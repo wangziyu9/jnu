@@ -1,99 +1,49 @@
-// 20xx#x
-// Description:
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
 
-// print hello world
-// hello world
 
-// Code:
 
-typedef struct _node
+int VALUEFACES = 3;
+int COUNTS = 4;
+int a[100][3] = {0};
+
+void init_array()
 {
-    int value;
-    struct _node *next;
-} Node;
-
-#include <stdlib.h>
-#include <stdio.h>
-int main()
-{
-    // long *a = 0;
-    // a = (long *)malloc(100 * sizeof(long));
-    // for(int i = 0; i < 100; i++)
-    // {
-    //     a[i] = i;
-    // }
-
-    // for(long i = 0; i<100; i+=1)
-    // {
-    //     printf("%d ", *a++);
-    // }
-    // free(a);
-
-    Node *head = NULL;
-    int number;
-    for (int i = 0; i < 100; i++)
+    for (int row = 0; row < 100; row++)
     {
-        number = i;
-
-        Node *p = (Node *)malloc(sizeof(Node));
-        p->value = number;
-        p->next = NULL;
-
-        Node *last = head;
-        if (last)
-        {
-            while (last->next)
-            {
-                last = last->next;
-            }
-            last->next = p;
-        }
-        else
-        {
-            head = p;
-        }
+        a[row][0] = 1;
     }
-
-    Node *p = head;
-    Node *tmp = p;
-    Node *last;
-    int i = 0;
-
-    while (p)
-    {
-        i++;
-        if (i == 0)
-        {
-            tmp = p;
-            printf("%d", tmp->value);
-        }
-        printf("%d ", p->value);
-        last = p;
-        p = p->next;
-        
-    }
-    
-    printf("hello world\n");
-    last -> next = head;
-    head = tmp->next;
-    tmp -> next = NULL;
-
-    Node *q = head;
-    while (q)
-    {
-        printf("%d ", q->value);
-        q = q->next;
-    }
-
-    
-    getchar();
-    return 0;
 }
 
-// Input:
+int config_col(int row, int col, int curr)
+{
+    for(int i = curr + 1; i <= curr * COUNTS + 1; i++)
+    {
+        a[row][col] = i;
+        row = config_col(row, col + 1,i);
+        if(col == COUNTS - 1)
+        {
+            row++;
+            return row;
+        }
+    }
+}
 
-// No input
+void config_array()
+{
+    int row = 0;
+    config_col(row, 0, 0);
+    
+}
 
-// Output:
-
-// hello world
+int main()
+{
+    init_array();
+    config_array();
+    // for(int i = 0; i < 100; i++)
+    // {
+    //     printf("%d\t%d\t%d\n", a[i][0], a[i][1], a[i][2]);
+    // }
+    return 0;
+}
