@@ -9,16 +9,16 @@
 #include <stdio.h>
 
 // O(2^n)
-int fib(int a, int b)
+void fib(int a, int b)
 {
     printf("%d ", a);
     if(a < 10000000)
-        return fib(b, a + b);
+        fib(b, a + b);
 }
 
 int main()
 {
-    int f = fib(1, 1);
+    fib(1, 1);
     return 0;
 }
 
