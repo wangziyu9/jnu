@@ -9,6 +9,8 @@
 #include <stdio.h>
 
 // O(2^n)
+
+
 void matrixmult(int c[2][2], int a[2][2], int b[2][2])
 {
     int tmp[4];
@@ -22,7 +24,6 @@ void matrixFastPow(int base[2][2], int n, int mod)
 {
 
 }
-
 
 int main()
 {
