@@ -1,20 +1,21 @@
 #include<stdio.h>
 
-int quickPow(int a,int b)
+int quickPow(int base,int exp)
 {   //快速幂
     int ans = 1;
-    while(b){
-        if(b & 1) ans*=a;
+    while(exp){
+        if (exp & 1) 
         {
-            a *= a;
+            ans*=base;
         }
-        b /= 2;
+        base *= base;
+        exp /= 2;
     }
     return ans;
 }
 
 int main()
 {
-    printf("%d", quickPow(2, 9));
+    printf("%d", quickPow(2, 10));
     return 0;
 }

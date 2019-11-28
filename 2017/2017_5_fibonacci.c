@@ -3,12 +3,15 @@
 
 // fibonacci
 // O(n) O(logn)
+
+// Explain:
+
 // Code:
 
 #include <stdlib.h>
 #include <stdio.h>
 
-// O(2^n)
+// 递归实现，O(2^n)
 void fib(int a, int b)
 {
     printf("%d ", a);
