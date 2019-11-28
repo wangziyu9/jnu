@@ -63,8 +63,8 @@ void matrixFastPow(int base[2][2], int exp)
         
         exp /= 2;
     }
-    printf("%d %d\n%d %d\n", ans[0][0], ans[0][1],ans[1][0], ans[1][1]);
-    // printf("%d ", ans[0][1]);
+    // printf("%d %d\n%d %d\n", ans[0][0], ans[0][1],ans[1][0], ans[1][1]);
+    printf("%d ", ans[0][1]);
 }
 
 int main()
