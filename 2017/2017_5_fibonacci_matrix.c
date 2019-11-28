@@ -27,7 +27,7 @@
 #include <stdio.h>
 
 // 求矩阵乘积，[product] = [a] * [b]
-void matrixmult(int product[2][2], int a[2][2], int b[2][2])
+void matrixMult(int product[2][2], int a[2][2], int b[2][2])
 {
     product[0][0] = a[0][0] * b[0][0] + a[0][1] * b[1][0];
     product[0][1] = a[0][0] * b[0][1] + a[0][1] * b[1][1];
@@ -47,7 +47,7 @@ void matrixFastPow(int base[2][2], int exp)
         if(exp & 1)
         {
             // ans *= base;
-            matrixmult(product, ans, base);
+            matrixMult(product, ans, base);
             ans[0][0] = product[0][0];
             ans[0][1] = product[0][1];
             ans[1][0] = product[1][0];
@@ -55,7 +55,7 @@ void matrixFastPow(int base[2][2], int exp)
         }
 
         // base *= base;
-        matrixmult(product, base, base);
+        matrixMult(product, base, base);
         base[0][0] = product[0][0];
         base[0][1] = product[0][1];
         base[1][0] = product[1][0];
