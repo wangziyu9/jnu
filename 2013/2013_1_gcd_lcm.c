@@ -1,16 +1,16 @@
+// 2013#1
+// Description:
+
+// Calculate the gcd and lcm in sub function
+
+// Code:
+
 #include<stdio.h>
 
-int main()
+int gcd(int a, int b)
 {
-    int a = 60;
-    int b = 48;
-    int product = 0;
     int tmp = 0;
     int mod = 1;
-
-    scanf("%d %d", &a, &b);
-    product = a * b;
-
     while(mod != 0)
     {
         if(a < b)
@@ -24,6 +24,27 @@ int main()
         a = mod;
     }
     printf("GCD %d\n", b);
-    printf("LCM %d\n", product / b);
+    return b;
+}
+
+int lcm(int a, int b, int g)
+{
+    printf("LCM %d\n", a * b / g);
+}
+
+int main()
+{
+    int a = 60;
+    int b = 48;
+    int product = 0;
+
+
+    scanf("%d %d", &a, &b);
+    int g = gcd(a, b);
+    lcm(a, b, g);
     return 0;
 }
+
+// 7 8
+// GCD 1
+// LCM 56
