@@ -22,6 +22,11 @@ int main()
     return 0;
 }
 
+// Input:
+
+// No input
+
+// Output:
 
 // 2
 // 300
