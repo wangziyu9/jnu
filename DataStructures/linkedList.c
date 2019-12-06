@@ -12,7 +12,7 @@ int main()
     Node *head = NULL;
     int d = 0;
     do{
-        scanf("%d ", &d);
+        scanf("%d", &d);
         if(d != -1)
         {
             Node *p = (Node*)malloc(sizeof(Node));
@@ -31,6 +31,10 @@ int main()
                 head = p;
             }
         }
+        else
+        {
+            break;
+        } 
     }while(d != -1);
 
     Node *h = head;
