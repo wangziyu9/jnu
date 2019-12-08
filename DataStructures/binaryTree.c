@@ -1,13 +1,18 @@
 # include<stdlib.h>
 # include<stdio.h>
 
+<<<<<<< HEAD
 int p[100][100] = {0};
 
 typedef struct binaryTree
+=======
+typedef struct BiTNode
+>>>>>>> 18d94c97e894f27c56392be52c2dc83a308eb9c5
 {
     int data;
     struct binaryTree *lchild;
     struct binaryTree *rchild;
+<<<<<<< HEAD
 }BiTNode;
 
 
@@ -58,4 +63,11 @@ int main()
     }
     pret(root);
     return 0;
+=======
+}BiTNode, *BiTree;
+
+int main()
+{
+
+>>>>>>> 18d94c97e894f27c56392be52c2dc83a308eb9c5
 }
