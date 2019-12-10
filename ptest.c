@@ -2,8 +2,8 @@
 #include<stdlib.h>
 int main ()
 {
-    int a[10];
-    int p[10] = {1, 2, 3, 5, 6, 8};
+    int a[10] = {8,9,7,5,7,};
+    int *p[10];
 
     for(int i = 0; i < 10; i++)
     {
@@ -11,7 +11,7 @@ int main ()
     }
     for(int i = 0; i < 10; i++)
     {
-        printf("%p ", p[i]);
+        printf("%d ", *p[i]);
     }
     return 0;
 }

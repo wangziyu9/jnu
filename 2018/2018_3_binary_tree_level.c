@@ -1,6 +1,8 @@
 # include<stdlib.h>
 # include<stdio.h>
 
+int p[100][100] = {0};
+
 typedef struct binaryTree
 {
     int data;
@@ -39,6 +41,37 @@ void pret(BiTNode *root)
         pret(root->lchild);
         pret(root->rchild);
     }   
+}
+
+void lvlt(BiTNode *root)
+{
+    int row, i, j;
+    p[0][0] = root;
+
+    for(row = 0; row < 100; row++)
+    {
+        for(i = 0; i < 100; i++)
+        {
+            if(p[row][i])
+            {
+                if(p[row][i]->lchild)
+                {
+                    p[row+1][j] = p[row][i]->lchild;
+                    j++
+                }
+                if(p[row][i]->rchild)
+                {
+                    p[row+1][j] = p[row][i]->rchild;
+                    j++
+                }
+            }
+            else
+            {
+                continue;
+            }
+            
+        }
+    }
 }
 
 int main()
