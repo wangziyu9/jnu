@@ -37,7 +37,7 @@ typedef struct binaryTree
 int depth = 0;
 int isFullBT = 1;
 
-// 输入数字，按照顺序构建为二叉搜索树
+// 输入数字，按照顺序构建为二叉排序树
 BiTNode* insert(BiTNode *subroot, int d)
 {    
     if(subroot == NULL)
