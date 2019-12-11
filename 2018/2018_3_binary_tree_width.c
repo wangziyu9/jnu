@@ -75,6 +75,8 @@ int main()
 {
     BiTNode *root = NULL;
     int d = 0;
+
+    // 循环输入数字构建二叉树，以 -1 结束
     while (1)
     {
         scanf("%d", &d);
@@ -84,6 +86,7 @@ int main()
         }
         root = insert(root, d);
     }
+    
     preorderTraversal(root,0);
 
     // 遍历数组得到最大宽度

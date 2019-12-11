@@ -4,7 +4,6 @@
 // find the first char which appear only once
 // // Time complexity O(n * n)
 
-
 // Code:
 
 #include <stdlib.h>
