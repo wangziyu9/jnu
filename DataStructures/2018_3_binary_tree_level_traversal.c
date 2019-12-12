@@ -1,26 +1,24 @@
 // 2018#3
 // Description:
-// 判断一个二叉树是否是满二叉树
+// 输出一个二叉树的最大宽度
 
 // Explain:
-// 本解中，未使用二叉树的层序遍历，而是使用先序遍历递归遍历二叉树，
-// 当二叉树为满二叉树，最下层节点应位于同一层，只需要得到每个分支的深度，即可判断是否为满二叉树
+// 使用先序遍历递归遍历二叉树，写入二维数组，实现二叉树层序输出
 // 先序遍历函数附加一个整型变量参数，用于记录本层是第几层，
-// 每递归一次，层数加一。直到节点为空，即为当前分支深度（分支包括空节点）
-// 设置全局标记变量初值 1，当得到分支深度与之前得到的分支深度对比，若不一致，标识变量置为 0，非满二叉树
-// 遍历所有分支，深度都一致，为满二叉树
-// 
+// 每递归一次，层数加一。当节点非空，将值写入二维数组对应层
+// 由于左子树节点总是在前，故能够保证每层节点有序
 // 如二叉树：
-// 零层             8
-//                /  \
-//               /    \
-// 一层          7      9 
-// 分支深度     /  \   (2)(2)
-//            /    \ 
-// 二层       5      7
-// 分支深度 (3)(3) (3)(3)
 // 
-// 存在深度为 3 和 2 的节点，深度不同
+// 零层     8
+//        / \
+// 一层   7   9 
+//      / \
+// 二层 5   7
+// 数组为 
+// 8 0 0……
+// 7 9 0
+// 5 7 0
+// ……
 
 // Code:
 
@@ -34,8 +32,8 @@ typedef struct binaryTree
     struct binaryTree *rchild;
 }BiTNode;
 
-int depth = 0;
-int isFullBT = 1;
+// 建立二维数组，存储层序遍历节点值
+int nd[100][100] = {0};
 
 // 输入数字，按照顺序构建为二叉排序树
 BiTNode* insert(BiTNode *subroot, int d)
@@ -60,6 +58,18 @@ BiTNode* insert(BiTNode *subroot, int d)
     return subroot;
 }
 
+void insert2array(int level, int value)
+{
+    for(int i = 0; i < 100; i++)
+    {
+        if(nd[level][i] == 0)
+        {
+            nd[level][i] = value;
+            break;
+        }
+    }
+}
+
 // 递归实现先序遍历
 void preorderTraversal(BiTNode *root, int d)
 {
@@ -67,25 +77,12 @@ void preorderTraversal(BiTNode *root, int d)
     {
         // printf("node at the %d th level, ", d);
         // printf("value is：%d\n",root->data);
+        insert2array(d, root->data);
 
+        // 对应层数的记录加一
         d = d + 1;
         preorderTraversal(root->lchild, d);
         preorderTraversal(root->rchild, d);
-    }
-    else
-    {
-        if(depth == 0)
-        {
-            depth = d;
-        }
-        else
-        {
-            if(depth != d)
-            {
-                isFullBT = 0;
-            }
-        }
-        
     }
 }
 
@@ -93,7 +90,7 @@ int main()
 {
     BiTNode *root = NULL;
     int d = 0;
-    
+
     // 循环输入数字构建二叉树，以 -1 结束
     while (1)
     {
@@ -104,32 +101,54 @@ int main()
         }
         root = insert(root, d);
     }
-
+    
     preorderTraversal(root,0);
 
-    // 判断标识变量
-    if(isFullBT)
+    // 双循环输出二维数组
+    for(int level = 0; level < 100; level++)
     {
-        printf("is full binary tree");
+        if(nd[level][0] != 0)
+        {
+            printf("\nthe %d th level\n", level);
+            for(int i = 0; i < 100; i++)
+            {
+                if(nd[level][i] != 0)
+                {
+                    printf("%d ",nd[level][i]);
+                }
+                else
+                {
+                    break;
+                }
+            }
+        }
+        else
+        {
+            break;
+        }
     }
-    else
-    {
-        printf("is NOT full binary tree");
-    }
-    
+        
     return 0;
 }
 
 // Input/Output
 
 // 1 -1
-// is full binary tree
-
-// 3 9 -1
-// is NOT full binary tree
+// the 0 th level
+// 1 
 
 // 8 9 7 5 7 -1
-// is NOT full binary tree
+// the 0 th level
+// 8 
+// the 1 th level
+// 7 9 
+// the 2 th level
+// 5 7
 
 // 8 9 7 5 7 8 9 -1
-// is full binary tree
+// the 0 th level
+// 8 
+// the 1 th level
+// 7 9 
+// the 2 th level
+// 5 7 8 9

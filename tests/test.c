@@ -13,7 +13,11 @@ void swap(int *pa, int *pb)
 int main()
 {
     int a = 1, b = 88;
-    swap(&a, &b);
+    int f = -1;
+    if(f){
+        swap(&a, &b);
+    }
+    
     printf("%d %d", a, b);
     return 0;
     
