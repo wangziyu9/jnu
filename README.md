@@ -2,8 +2,6 @@
 
 Jiangnan University Postgraduate Entrance Examination 833 Data Structures and Algorithms.Topics and Solutions.
 
-江南大学研究生入学考试，833 数据结构和算法，题目与题解。
-
 ## Topics
 
 ### 2012
