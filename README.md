@@ -2,7 +2,7 @@
 
 Jiangnan University Postgraduate Entrance Examination 833 Data Structures and Algorithms.Topics and Solutions.
 
-Topics self purchased from Taobao, Complete coding independently. If you are looking for test questions and answers, and it is useful for you, Please STAR☆, fork, watch, and pull requests the repo, Thank you.
+Topics self purchased from taobao, Complete coding independently. If you are looking for test questions and answers, and the repository is useful for you, Please STAR☆, fork, watch, and pull requests to the repo, Thank you, it will help me a lot.
 
 ## Topics
 
