@@ -1,8 +1,10 @@
 # JNU
 
-Jiangnan University Postgraduate Entrance Examination 833 Data Structures and Algorithms.Topics and Solutions.
+Jiangnan University Postgraduate Entrance Examination 833 Data Structures and Algorithms. Topics and Solutions.
 
-Topics self purchased from taobao, Complete coding independently. If you are looking for test questions and answers, and the repository is useful for you, Please STAR☆, fork, watch, and pull requests to the repo, Thank you, it will help me a lot.
+Topics are self purchased from the Internet, copyright belongs to Jiangnan University. Complete the answers coding independently by myself(If no extra annotate). 
+
+If you are looking for the examination questions and reference answers, hope the repository is useful for you. Please STAR☆, fork, watch, and pull requests to the repo, Thank you, it will helps me a lot.
 
 ## Topics
 
