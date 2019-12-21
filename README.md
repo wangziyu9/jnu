@@ -2,7 +2,7 @@
 
 Jiangnan University Postgraduate Entrance Examination 833 Data Structures and Algorithms. Topics and Solutions.
 
-Topics are self purchased from the Internet, copyright belongs to Jiangnan University. Complete the answers coding independently by myself(If no extra annotate). 
+Topics are self purchased from the Internet, copyright belongs to Jiangnan University. Complete the answers coding independently by myself (If no extra annotate). 
 
 If you are looking for the examination questions and reference answers, hope the repository is useful for you. Please STAR☆, fork, watch, and pull requests to the repo, Thank you, it will helps me a lot.
 
@@ -16,7 +16,7 @@ If you are looking for the examination questions and reference answers, hope the
 5. [数字中有多少“1”](2018/2018_5_ones_in_number.c)
 6. [邮票问题](2018/2018_6_stamp_A.c)
 7. 
-8. 
+8. [分治法数列最值](2018\2018_8_divide_and_conquer_min_max.c)
 ### 2017
 1. [数列奇偶排序](2017/2017_1_split_odd_even_number.c)
 2. 
