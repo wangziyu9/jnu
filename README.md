@@ -9,14 +9,14 @@ If you are looking for the examination questions and reference answers, hope the
 ## Topics
 
 ### 2019
-1. 删除链表结点
-2. 构建排序二叉树
-3. 快速排序
-4. 合法栈操作
-5. 叶子结点计数
-6. 租船问题
-7. 不回头神枪手
-8. 公交车里程票价
+1. [删除链表结点](2019/2019_1_linknode_delete.c)
+2. [构建排序二叉树](2019/2019_2_sorted_binary_tree.c)
+3. [快速排序](2019/2019_3_quick_sort.c)
+4. [合法栈操作](2019/2019_4_legal_stack_operate.c)
+5. [叶子结点计数](2019/2019_5_count_leaf_node.c)
+6. [租船问题](2019/2019_6_rent_boats.c)
+7. [不回头神枪手](2019/2019_6_rent_boats.c)
+8. [公交车里程票价](2019/2019_8_total_mileage_fare.c)
 ### 2018
 1. [数组偏移](2018/2018_1_circulate.c)
 2. [数组奇偶数分离](2018/2018_2_odds_even_list.c)
