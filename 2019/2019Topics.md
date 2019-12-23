@@ -25,7 +25,7 @@
 ### 叶子结点计数 
 （10+10 points）
 
-定义 void CountLeaf(BiTree * t, int count)
+定义 void CountLeaf(BiTree * t, int *count)
 记录二叉树中叶子结点的数量。
 
 
