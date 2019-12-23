@@ -15,7 +15,7 @@ If you are looking for the examination questions and reference answers, hope the
 4. [合法栈操作](2019/2019_4_legal_stack_operate.c)
 5. [叶子结点计数](2019/2019_5_count_leaf_node.c)
 6. [租船问题](2019/2019_6_rent_boats.c)
-7. [不回头神枪手](2019/2019_6_rent_boats.c)
+7. [不回头神枪手](2019/2019_7_shooter_never_look_back.c)
 8. [公交车里程票价](2019/2019_8_total_mileage_fare.c)
 ### 2018
 1. [数组偏移](2018/2018_1_circulate.c)
