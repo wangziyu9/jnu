@@ -32,15 +32,15 @@ bool isLegal(char opreate[])
 
 int main()
 {
-    char opreate[50];
-    scanf("%s", opreate);
-    if(isLegal(opreate))
+    char operate[50];
+    scanf("%s", operate);
+    if(isLegal(operate))
     {
-        printf("opreate is legal\n");
+        printf("operate is legal\n");
     }
     else
     {
-        printf("opreate is illegal\n");
+        printf("operate is illegal\n");
     }
     return 0;
 }
