@@ -15,7 +15,7 @@ If you are looking for the examination questions and reference answers, hope the
 4. 合法栈操作
 5. 叶子结点计数
 6. 租船问题
-7. 不回头神枪手射击
+7. 不回头神枪手
 8. 公交车里程票价
 ### 2018
 1. [数组偏移](2018/2018_1_circulate.c)
