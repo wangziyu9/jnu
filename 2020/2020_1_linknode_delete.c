@@ -10,6 +10,7 @@ typedef struct linkedList
 int main()
 {
     Node *head = NULL;
+    Node *last = NULL;
     int d = 0;
     do{
         scanf("%d", &d);
@@ -18,17 +19,15 @@ int main()
             Node *p = (Node*)malloc(sizeof(Node));
             p->data = d;
             p->next = NULL;
-            Node *last = head;
-            if(last){
-                while (last->next)
-                {
-                    last = last->next;
-                }
-                last->next = p;
+           
+            if (head == NULL) {
+                head = p;
+                last = head;
             }
             else
             {
-                head = p;
+                 last->next = p;
+                 last = p;
             }
         }
         else
