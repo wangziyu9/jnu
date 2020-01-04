@@ -1,5 +1,7 @@
+// 租船问题
 #include<stdio.h>
 
+// 冒泡排序数组升序
 void sort(int n[], int length)
 {
     int t = 0;
@@ -17,12 +19,15 @@ void sort(int n[], int length)
     }
 }
 
+// 两端分别向内遍历有序数组，找到可以同乘的乘客，计算租船数量
 int rent_boat(int weight, int n[], int length)
 {
     int total_boat = 0;
     int double_boat = 0;
     int i = 0; 
     int j = length - 1;
+
+    // 两端分别向内遍历有序数组，如果小于限重，可两人同乘，如果大于限重，则继续向内遍历，直到两端相遇
     for(i; i < j; i++)
     {
         for(j; j > i; j--)
@@ -34,9 +39,12 @@ int rent_boat(int weight, int n[], int length)
             }
         }
     }
+    // 总租船数 = 总人数 - 两人同乘的船数
     total_boat = length - double_boat;
     return total_boat;
 }
+
+// 主函数处理输入输出
 int main()
 {
     int length = 5;
@@ -58,9 +66,11 @@ int main()
     return 0;
 }
 
-// Input:
+// Input/Output:
 // 85 6
 // 5 84 85 80 84 83
+// total boat count is:5
 
-// Output:
-// 5
+// 20 2    
+// 11 11
+// total boat count is:2
